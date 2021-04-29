@@ -1,8 +1,10 @@
 .nav {
     display: flex;
     justify-content: space-evenly;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .nav--item {
+    background-color: var(--clr-primary);
     text-transform: capitalize;
 }
