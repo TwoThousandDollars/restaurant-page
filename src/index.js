@@ -1,4 +1,7 @@
 import buildPage from './buildPage.js';
+import home from './home/home.js';
+import menu from './menu/menu.js';
+
 
 import './variables.css';
 import './about/about.css';
@@ -10,7 +13,19 @@ import './nav/nav.css';
 
 window.onload = () => {
 
-    let mainContent = document.querySelector("#content");
-    buildPage(mainContent);
+    let initialContent = document.querySelector("#content");
+    let pageController = buildPage(initialContent);
+
+    let homeButton = document.querySelector("#home");
+    homeButton.addEventListener("click", () => {
+        pageController.clearContent();
+        pageController.setContent(initialContent, home());
+    });
+
+    let menuButton = document.querySelector("#menu");
+    menuButton.addEventListener("click", () => {
+        pageController.clearContent();
+        pageController.setContent(initialContent, menu());
+    });
 
 }
