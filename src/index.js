@@ -1,5 +1,3 @@
-import home from './home/home.js';
-import about from './about/about.js';
 import buildPage from './buildPage.js';
 
 import './variables.css';

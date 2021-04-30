@@ -5,6 +5,5 @@
 }
 
 .nav--item {
-    background-color: var(--clr-primary);
     text-transform: capitalize;
 }
